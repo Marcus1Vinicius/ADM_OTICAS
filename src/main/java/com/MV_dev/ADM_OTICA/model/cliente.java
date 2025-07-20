@@ -1,17 +1,15 @@
 package com.MV_dev.ADM_OTICA.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 
 import java.awt.image.BufferedImage;
 
-@Entity
-@Table
-public class administrador_otica {
+public class cliente {
     private String nome;
     private String celular;
     private  String email;
-    private String senha;
+    private String produtos_adquiridos;
     private String CPF;
-    private String otica;
+    private String endereco;
+    private String RG;
+    private String receita;
     private BufferedImage imagem_perfil;
 }
