@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 
 @Entity
 @Table
-public class administrador_otica {
+public class Administrador_otica {
     private String nome;
     private String celular;
     private  String email;

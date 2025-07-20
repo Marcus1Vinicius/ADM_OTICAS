@@ -2,7 +2,7 @@ package com.MV_dev.ADM_OTICA.model;
 
 import java.awt.image.BufferedImage;
 
-public class otica {
+public class Otica {
     private String nome;
     private String adm;
     private  String endereco;

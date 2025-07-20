@@ -1,6 +1,6 @@
 package com.MV_dev.ADM_OTICA.model;
 
-public class receita_cliente {
+public class Receita_cliente {
     private String produto;
     private String data;
     private String especialista_da_receita;

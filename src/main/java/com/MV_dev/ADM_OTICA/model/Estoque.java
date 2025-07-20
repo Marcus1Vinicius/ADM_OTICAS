@@ -1,6 +1,6 @@
 package com.MV_dev.ADM_OTICA.model;
 
-public class estoque {
+public class Estoque {
     private String produtos;
     private String quantidade_produtos;
     private String categorias;
