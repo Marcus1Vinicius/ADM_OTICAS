@@ -14,10 +14,10 @@ public class Administrador_otica {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String celular;
-    private  String email;
-    private String senha;
-    private String CPF;
-    private String otica;
+    private Celular celular;
+    private  Email email;
+    private Senha senha;
+    private CPF CPF;
+    private Otica otica;
     private BufferedImage imagem_perfil;
 }

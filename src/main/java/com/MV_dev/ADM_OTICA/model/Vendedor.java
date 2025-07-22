@@ -13,9 +13,9 @@ public class Vendedor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String celular;
-    private  String email;
-    private String senha;
-    private String CPF;
+    private Celular celular;
+    private  Email email;
+    private Senha senha;
+    private CPF CPF;
     private BufferedImage imagem_perfil;
 }

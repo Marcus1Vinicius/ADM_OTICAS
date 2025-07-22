@@ -13,12 +13,11 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String celular;
-    private  String email;
-    private String produtos_adquiridos;
-    private String CPF;
-    private String endereco;
-    private String RG;
-    private String receita;
+    private Celular celular;
+    private  Email email;
+    private Produto produtos_adquiridos;
+    private CPF CPF;
+    private Endereco endereco;
+    private Receita_cliente receita;
     private BufferedImage imagem_perfil;
 }
