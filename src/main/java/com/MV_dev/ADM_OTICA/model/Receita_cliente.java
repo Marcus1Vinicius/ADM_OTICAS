@@ -10,11 +10,11 @@ public class Receita_cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String produto;
+    private Produto produto;
     private String data;
     private String especialista_da_receita;
-    private String endereco_especialista;
+    private Endereco endereco_especialista;
     private String grau_esferico;
     private String observacoes;
-    private String cliente;
+    private Cliente cliente;
 }
