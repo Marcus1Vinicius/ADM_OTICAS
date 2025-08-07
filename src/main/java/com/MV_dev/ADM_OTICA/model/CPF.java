@@ -13,7 +13,7 @@ public class CPF {
         if(cpfNumerico.length() != 11 || cpfNumerico.matches("(\\d)\\1{10}")){
             return false;
         }
-
     }
+}
 
 
