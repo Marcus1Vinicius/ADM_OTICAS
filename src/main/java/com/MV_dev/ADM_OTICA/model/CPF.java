@@ -1,5 +1,8 @@
 package com.MV_dev.ADM_OTICA.model;
 
+import lombok.Getter;
+
+@Getter
 public class CPF {
 
     private String CPF;
@@ -7,10 +10,6 @@ public class CPF {
     // Construtor privado para evitar a criação de instâncias sem validação
     private CPF(String cpf) {
         this.CPF = cpf;
-    }
-
-    public String getCPF() {
-        return this.CPF;
     }
 
     // Método estático para validar o CPF
