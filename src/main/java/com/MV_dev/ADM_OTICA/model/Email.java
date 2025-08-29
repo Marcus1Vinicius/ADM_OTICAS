@@ -1,7 +1,4 @@
 package com.MV_dev.ADM_OTICA.model;
-
-import static org.springframework.boot.context.properties.source.ConfigurationPropertyName.isValid;
-
 public class Email {
     private String email;
 
@@ -23,6 +20,15 @@ public class Email {
             throw new IllegalArgumentException("Endereço de e-mail inválido: " + email);
         }
         return new Email(email);
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    @Override
+    public String toString() {
+        return email;
     }
 
 }
