@@ -16,7 +16,7 @@ public class Email {
 
     public static boolean isValid(String email) {
         // .trim() -> remove os espaços em branco do inicio ao fim de uma string
-        // .isEmpty -> verifica se uma string éã vazia ou nao.
+        // .isEmpty -> verifica se uma string é vazia ou nao.
         // usando as duas expressçoes eu garanto que o email nao sera vazio e nem vai ter espaco desnessarios
         if (email == null || email.trim().isEmpty()) {
             return false;
