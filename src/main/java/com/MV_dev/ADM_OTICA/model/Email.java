@@ -1,4 +1,13 @@
 package com.MV_dev.ADM_OTICA.model;
+import jakarta.persistence.Embeddable;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
+
+@Getter
+@ToString
+@EqualsAndHashCode
+@Embeddable
 public class Email {
     private String email;
 
@@ -20,10 +29,6 @@ public class Email {
             throw new IllegalArgumentException("Endereço de e-mail inválido: " + email);
         }
         return new Email(email);
-    }
-
-    public String getEmail() {
-        return email;
     }
 
     @Override

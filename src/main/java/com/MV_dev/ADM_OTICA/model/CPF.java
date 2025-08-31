@@ -1,21 +1,31 @@
 package com.MV_dev.ADM_OTICA.model;
 
+import jakarta.persistence.Embeddable;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.ToString;
 
 @Getter
+@ToString
+@EqualsAndHashCode
+@Embeddable
 public class CPF {
 
-    private String CPF;
+    private String cpf;
 
     // Construtor privado para evitar a criação de instâncias sem validação
     private CPF(String cpf) {
-        this.CPF = cpf;
+        this.cpf = cpf;
     }
 
     // Método estático para validar o CPF
-    public static boolean CPFValido(String CPF) {
+    public static boolean isValid(String cpf) {
+
+        if (cpf == null) {
+            return false;
+        }
         // Remove caracteres não numéricos (pontos, traços, etc.)
-        String cpfNumerico = CPF.replaceAll("[^0-9]", "");
+        String cpfNumerico = cpf.replaceAll("[^0-9]", "");
 
         // Verifica se o CPF tem 11 dígitos e não é uma sequência de números iguais
         if (cpfNumerico.length() != 11 || cpfNumerico.matches("(\\d)\\1{10}")) {
@@ -49,8 +59,16 @@ public class CPF {
         if (Character.getNumericValue(cpfNumerico.charAt(10)) != digito2) {
             return false;
         }
-
         // Se todas as verificações passarem, o CPF é válido
         return true;
     }
+
+    public static CPF of(String cpf){
+        if (!isValid(cpf)){
+            // IllegalArgumentException é lançada quando um método recebe um argumento ilegal ou impróprio, ou seja, um valor que não atende aos requisitos ou condições esperadas pelo método.
+            throw new IllegalArgumentException("O CPF digitado é inválido: " + cpf);
+        }
+        return new CPF(cpf);
+    }
+
 }
