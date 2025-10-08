@@ -12,7 +12,5 @@ import lombok.ToString;
 public class Senha {
     private String Semha;
 
-    public static boolean SenhaValido(String Senha){
 
-    }
 }
